@@ -39,6 +39,7 @@ jobs:
         with:
           command: -Kapp.machines=linux.amd64.glibc make linux-app
           agree_to_license: 1
+          signing_key: ${{ secrets.CONVEYOR_SIGNING_KEY }}
 
       - name: Wrap Linux app tree into an AppImage
         run: ./gradlew :desktopApp:packageConveyorAppImage --no-configuration-cache
