@@ -13,7 +13,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.maxrave.simpmusic.ui.navigation.destination.home.AnalyticsDestination
 import com.maxrave.simpmusic.ui.navigation.destination.home.ArtistPathDestination
-import com.maxrave.simpmusic.ui.screen.home.artistpath.ArtistPathScreen
 import com.maxrave.simpmusic.ui.navigation.destination.home.HomeDestination
 import com.maxrave.simpmusic.ui.navigation.destination.home.WrappedDestination
 import com.maxrave.simpmusic.ui.theme.ForceDarkContent
@@ -23,6 +22,7 @@ import com.maxrave.simpmusic.ui.navigation.destination.player.FullscreenDestinat
 import com.maxrave.simpmusic.ui.navigation.destination.search.SearchDestination
 import com.maxrave.simpmusic.ui.screen.home.HomeScreen
 import com.maxrave.simpmusic.ui.screen.home.analytics.AnalyticsScreen
+import com.maxrave.simpmusic.ui.screen.home.artistpath.ArtistPathScreen
 import com.maxrave.simpmusic.ui.screen.home.wrapped.WrappedScreen
 import com.maxrave.simpmusic.ui.screen.library.LibraryScreen
 import com.maxrave.simpmusic.ui.screen.library.MixForYouScreen
@@ -96,6 +96,7 @@ fun AppNavigationGraph(
                 )
             }
         }
+        // ArtistPath: find the chain of similar artists between two artists.
         composable<ArtistPathDestination> {
             ArtistPathScreen(
                 navController = navController,
