@@ -12,6 +12,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.maxrave.simpmusic.ui.navigation.destination.home.AnalyticsDestination
+import com.maxrave.simpmusic.ui.navigation.destination.home.ArtistPathDestination
+import com.maxrave.simpmusic.ui.screen.home.artistpath.ArtistPathScreen
 import com.maxrave.simpmusic.ui.navigation.destination.home.HomeDestination
 import com.maxrave.simpmusic.ui.navigation.destination.home.WrappedDestination
 import com.maxrave.simpmusic.ui.theme.ForceDarkContent
@@ -93,6 +95,12 @@ fun AppNavigationGraph(
                     innerPadding = innerPadding,
                 )
             }
+        }
+        composable<ArtistPathDestination> {
+            ArtistPathScreen(
+                navController = navController,
+                innerPadding = innerPadding,
+            )
         }
         // Reached only from the Analytics screen's entry banner, so it inherits that screen's
         // gate on local tracking. ForceDarkContent for a different reason than Analytics: the reel
