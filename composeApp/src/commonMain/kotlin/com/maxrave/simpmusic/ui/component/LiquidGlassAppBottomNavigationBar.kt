@@ -5,6 +5,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
 import com.maxrave.simpmusic.ui.icon.AutoGraph
+import com.maxrave.simpmusic.ui.icon.ArtistPath
+import com.maxrave.simpmusic.ui.navigation.destination.home.ArtistPathDestination
+import simpmusic.composeapp.generated.resources.artist_path_tab
 import com.maxrave.simpmusic.ui.icon.Home
 import com.maxrave.simpmusic.ui.icon.LibraryMusic
 import com.maxrave.simpmusic.ui.icon.Search
@@ -105,6 +108,19 @@ sealed class BottomNavScreen(
         icon = {
             Icon(
                 imageVector = SimpIcons.Sensors,
+                contentDescription = null,
+            )
+        },
+    )
+
+    
+    data object ArtistPath : BottomNavScreen(
+        ordinal = 5,
+        destination = ArtistPathDestination,
+        title = Res.string.artist_path_tab,
+        icon = {
+            Icon(
+                imageVector = SimpIcons.ArtistPath,
                 contentDescription = null,
             )
         },
