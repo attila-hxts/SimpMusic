@@ -112,6 +112,7 @@ actual fun LiquidGlassAppBottomNavigationBar(
             BottomNavScreen.MixForYou.takeIf { showMixForYouTab },
             BottomNavScreen.Analytics.takeIf { showAnalyticsTab },
             BottomNavScreen.Library,
+            BottomNavScreen.ArtistPath,
             BottomNavScreen.Search,
         )
     // Tabs shown in the sliding bar (Apple Music style); Search lives in its own FAB.
@@ -121,6 +122,7 @@ actual fun LiquidGlassAppBottomNavigationBar(
             BottomNavScreen.MixForYou.takeIf { showMixForYouTab },
             BottomNavScreen.Analytics.takeIf { showAnalyticsTab },
             BottomNavScreen.Library,
+            BottomNavScreen.ArtistPath,
         )
     var selectedIndex by rememberSaveable {
         mutableIntStateOf(
